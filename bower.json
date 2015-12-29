@@ -1,0 +1,25 @@
+{
+  "name": "debounce-event",
+  "description": "Debounces batched browser event callback execution until the last event within a given time period. The utility provides support for attaching multiple callbacks to the same debounced event batch, manual detaching of batches, and the option to execute callbacks only once.",
+  "main": [
+    "dist/debounce-event.min.js"
+  ],
+  "devDependencies": {
+    "jquery": "2.1.4",
+    "requirejs": "2.1.22",
+    "mocha": "2.3.4",
+    "chai": "3.4.2"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "debounce",
+    "throttle",
+    "event"
+  ],
+  "author": "Greg Stallings <gregstallings@gmail.com>",
+  "license": "MIT"
+}

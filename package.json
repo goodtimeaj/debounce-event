@@ -1,0 +1,35 @@
+{
+  "name": "debounce-event",
+  "version": "0.0.1",
+  "description": "Debounces batched browser event callback execution until the last event within a given time period. The utility provides support for attaching multiple callbacks to the same debounced event batch, manual detaching of batches, and the option to execute callbacks only once.",
+  "main": "dist/debounce-event.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm install && grunt install && grunt build",
+    "test": "grunt build && grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregstallings/debounce-event.git"
+  },
+  "keywords": [
+    "debounce",
+    "throttle",
+    "event"
+  ],
+  "author": "Greg Stallings <gregstallings@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregstallings/debounce-event/issues"
+  },
+  "homepage": "https://github.com/gregstallings/debounce-event#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-shell": "^1.1.2",
+    "mocha-phantomjs": "^4.0.2"
+  }
+}
