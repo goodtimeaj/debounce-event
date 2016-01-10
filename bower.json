@@ -21,5 +21,10 @@
     "event"
   ],
   "author": "Greg Stallings <gregstallings@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "ignore": [
+    "/node_modules",
+    "/test/bower_components",
+    "/build"
+  ]
 }
