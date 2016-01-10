@@ -21,7 +21,7 @@ AMD:
   define(['debounce-event'], function() {
      // do something
   })
-<script>
+</script>
 ```
 
 
