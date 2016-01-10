@@ -18,7 +18,7 @@ AMD:
 ```html
 <script src="debounce-event.min.js"></script>
 <script>
-  define([debounce-event], function() {
+  define(['debounce-event'], function() {
      // do something
   })
 <script>
