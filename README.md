@@ -1,6 +1,6 @@
 # Debounce Event
 
-Debounces batched browser event callback execution until the last event within a given time period. The utility returns a key upon event/callback attachment which can be later used to attach multiple callbacks to the same debounced event batch by given element, event name, and timeout. Debounced event batches can be manually detached, or will detach automatically if the callback is specified to be executed only once.
+Debounces batched browser event callback execution until the last event within a given time period. The utility returns a key upon initial event attachment which can be later used to add multiple callbacks to the same debounced event batch by given element, event name, and timeout. Debounced event batches can be manually detached, or will detach automatically if the callback is specified to be executed only once and there are no other callbacks left in the event batch.
 
 ## Usage
 
@@ -43,12 +43,12 @@ require 'debounce-event'
 
 | Name | Description | Required |
 | ---- | ----------- | -------- |
-| eventName | Name of the browser event to handle. | if `eventKey` not given |
 | elem | DOM element to attach the event handler. | if `eventKey` not given |
+| eventName | Name of the browser event to handle. | if `eventKey` not given |
 | done | Callback to execute on the debounced event. | always |
-| timeout | Timeout (ms) at which to debounce the event before executing the callback. | always |
-| once | True if the callback should execute only once. If the event is the only event in its group, its handler will be detached after the callback executes. Default is `false`. | no |
-| eventKey | Previously returned key of an event group to add this callback. If this parameter is specified, `eventName` and `elem` are not used since an event group uses a common event handler. | no |
+| timeout | Timeout (ms) at which to debounce the event callback. | always |
+| once | True if the callback should execute only once. If the callback is the only one in its batch, its handler will be detached after the callback executes. Default is `false`. | no |
+| eventKey | Previously returned key of an event batch to add this callback. If this parameter is specified, `eventName` and `elem` are not used since an event batch uses a common event handler. | no |
 
 #### Example
 
@@ -84,7 +84,7 @@ var eventKey2 = DebounceEvent.attach({
   timeout: 300
 })
 
-// Manually detach the given event group
+// Manually detach the given event batch
 DebounceEvent.detach(eventKey2)
 ```
 
