@@ -32,7 +32,7 @@ npm install debounce-event
 ```
 
 ```javascript
-require 'debounce-event'
+var DebounceEvent = require('debounce-event')
 ```
 
 ### API
