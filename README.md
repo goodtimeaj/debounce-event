@@ -18,8 +18,8 @@ AMD:
 ```html
 <script src="debounce-event.min.js"></script>
 <script>
-  define(['debounce-event'], function() {
-     // do something
+  define(['debounce-event'], function(DebounceEvent) {
+    // do something
   })
 </script>
 ```
@@ -28,7 +28,7 @@ AMD:
 CommonJS:
 
 ```bash
-npm install debounce-event
+$ npm install debounce-event
 ```
 
 ```javascript
